@@ -1,0 +1,14 @@
+[Unit]
+Description=Telegram Bot
+After=network.target
+
+[Service]
+User=root
+Group=root
+
+WorkingDirectory=/home/bmabot/ChatBot/
+Environment="PYTHONPATH=/home/bmabot/ChatBot/"
+ExecStart=/home/bmabot/ChatBot/.venv/bin/python /home/bmabot/ChatBot/BMASite/main.py
+
+[Install]
+WantedBy=multi-user.target
